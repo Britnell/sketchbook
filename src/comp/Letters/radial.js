@@ -33,7 +33,7 @@ const Radial = ({ children }) => {
         return;
       }
 
-      const cent = linear(r, 0, rad, 900, 100);
+      const cent = linear(r, 0, rad, 1000, 100);
       const weight = Math.floor(cent / 100) * 100;
       span.style.fontWeight = `${weight}`;
     });
