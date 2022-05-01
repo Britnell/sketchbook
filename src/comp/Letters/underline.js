@@ -12,7 +12,7 @@ const Underline = ({ children }) => {
   const posRef = useRef({ x: 0, y: 0 });
 
   const update = (ev) => {
-    const rad = 60;
+    const rad = 70;
     let pos = {
       x: ev.clientX,
       y: ev.clientY,

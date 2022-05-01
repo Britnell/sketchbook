@@ -10,7 +10,7 @@ import Hidden from "./hidden";
 
 const Letters = () => {
   return (
-    <div>
+    <div style={{ fontSize: "24px" }}>
       <p style={{ fontSize: "120px" }}>
         <Capital>Storm on the Capital</Capital>
         <Capital>Lorem ipsum dolor sit amet</Capital>

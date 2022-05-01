@@ -11,7 +11,7 @@ const Radius = ({ children }) => {
   //
 
   let words = children.split(" ");
-  const rad = 60;
+  const rad = 70;
 
   const move = (ev) => {
     let pos = {
