@@ -12,7 +12,7 @@ const C = ({ L }) => {
       setLetter(L.toUpperCase());
     };
     const leave = () => {
-      setLetter(L.toLowerCase());
+      setTimeout(() => setLetter(L.toLowerCase()), 200);
     };
 
     ref.current.addEventListener("mouseover", over);
