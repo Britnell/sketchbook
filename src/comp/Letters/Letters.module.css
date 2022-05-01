@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;900&display=swap");
+
+h1 {
+  width: 50%;
+}
+main {
+  font-family: "Inconsolata", "Courier New", Courier, monospace;
+  margin-bottom: 20rem;
+  font-size: 1.2rem;
+}
+.glitch {
+  display: inline-block;
+}
+
+.paragraph {
+  width: 50%;
+}
+
+.censor {
+  display: inline-block;
+}
+
+.capital {
+  /* display: inline-block; */
+}
+
+.bold {
+  display: inline-block;
+  font-weight: 400;
+}
+
+.spacer {
+  color: grey;
+}
+
+.radius {
+  display: inline-block;
+}
+
+.underline {
+  display: inline-block;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.hidden {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.hiddenspan {
+  display: inline-block;
+}
