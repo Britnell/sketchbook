@@ -34,9 +34,7 @@ const S = ({ word }) => {
 
     ref.current.addEventListener("mouseover", over);
 
-    return () => {
-      ref.current.removeEventListener("mouseover", over);
-    };
+    // return () => ref.current.removeEventListener("mouseover", over);
   }, []);
 
   return <span ref={ref}>{word}</span>;

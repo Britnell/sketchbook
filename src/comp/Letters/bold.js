@@ -16,10 +16,10 @@ const C = ({ L }) => {
     ref.current.addEventListener("mouseover", over);
     ref.current.addEventListener("mouseleave", leave);
 
-    return () => {
-      ref.current.removeEventListener("mouseover", over);
-      ref.current.removeEventListener("mouseleave", leave);
-    };
+    // return () => {
+    //   ref.current.removeEventListener("mouseover", over);
+    //   ref.current.removeEventListener("mouseleave", leave);
+    // };
   }, []);
 
   return (

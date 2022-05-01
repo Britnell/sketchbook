@@ -54,7 +54,7 @@ const G = ({ L }) => {
 
     ref.current.addEventListener("mouseover", over);
 
-    return () => ref.current.removeEventListener("mouseover", over);
+    // return () => ref.current.removeEventListener("mouseover", over);
   }, []);
 
   useEffect(() => {

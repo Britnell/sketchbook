@@ -38,11 +38,9 @@ const Radius = ({ children }) => {
 
   const blockRef = useInView({
     onEnter: () => {
-      console.log(" reg");
       window.addEventListener("mousemove", move);
     },
     onLeave: () => {
-      console.log(" unreg ");
       window.removeEventListener("mousemove", move);
     },
     options: {

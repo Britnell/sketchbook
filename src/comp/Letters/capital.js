@@ -11,12 +11,16 @@ const C = ({ L }) => {
     const over = () => {
       setLetter(L.toUpperCase());
     };
+    const leave = () => {
+      setLetter(L.toLowerCase());
+    };
 
     ref.current.addEventListener("mouseover", over);
+    ref.current.addEventListener("mouseleave", leave);
 
-    return () => {
-      ref.current.removeEventListener("mouseover", over);
-    };
+    // return () => {
+    //   ref.current.removeEventListener("mouseover", over);
+    // };
   }, []);
 
   return <span ref={ref}>{letter}</span>;
