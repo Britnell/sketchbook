@@ -5,6 +5,7 @@ import Rotating from "./comp/Rotating";
 import Carousel from "./comp/Carousel";
 import Box from "./comp/Box";
 import Letters from "./comp/Letters";
+import Shadow from "./comp/Shadow";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
             <li>
               <Link to="/letters">Word glitch</Link>
             </li>
+            <li>
+              <Link to="/shadow">Responsive text shadows</Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -36,6 +40,7 @@ function App() {
           <Route path="/rotating" element={<Rotating />} />
           <Route path="/carousel" element={<Carousel />} />
           <Route path="/letters" element={<Letters />} />
+          <Route path="/shadow" element={<Shadow />} />
           <Route
             path="/box"
             element={
