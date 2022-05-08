@@ -6,7 +6,7 @@ import Carousel from "./comp/Carousel";
 import Box from "./comp/Box";
 import Letters from "./comp/Letters";
 import Shadow from "./comp/Shadow";
-
+import Buttons from "./comp/Buttons";
 function App() {
   return (
     <div className="App">
@@ -16,6 +16,9 @@ function App() {
             {/* <li>
               <Link to="/">Home</Link>
             </li>*/}
+            <li>
+              <Link to="/buttons">3D buttons</Link>
+            </li>
             <li>
               <Link to="/rotating">rotating box</Link>
             </li>
@@ -37,6 +40,7 @@ function App() {
       <main>
         <Routes>
           {/* <Route path="/" element={<div>Home</div>} />*/}
+          <Route path="/buttons" element={<Buttons />} />
           <Route path="/rotating" element={<Rotating />} />
           <Route path="/carousel" element={<Carousel />} />
           <Route path="/letters" element={<Letters />} />
