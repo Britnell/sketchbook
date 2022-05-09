@@ -7,6 +7,8 @@ import Box from "./comp/Box";
 import Letters from "./comp/Letters";
 import Shadow from "./comp/Shadow";
 import Buttons from "./comp/Buttons";
+import Clip from "./comp/Clip";
+
 function App() {
   return (
     <div className="App">
@@ -34,6 +36,9 @@ function App() {
             <li>
               <Link to="/shadow">Responsive text shadows</Link>
             </li>
+            <li>
+              <Link to="/clip">Dynamic Clip Path</Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -45,6 +50,7 @@ function App() {
           <Route path="/carousel" element={<Carousel />} />
           <Route path="/letters" element={<Letters />} />
           <Route path="/shadow" element={<Shadow />} />
+          <Route path="/clip" element={<Clip />} />
           <Route
             path="/box"
             element={
