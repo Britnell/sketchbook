@@ -8,6 +8,7 @@ import Letters from "./comp/Letters";
 import Shadow from "./comp/Shadow";
 import Buttons from "./comp/Buttons";
 import Clip from "./comp/Clip";
+import SizeError from "./comp/SizeError";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
             <li>
               <Link to="/clip">Dynamic Clip Path</Link>
             </li>
+            <li>
+              <Link to="/sizeerror">Css width errrors</Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -51,6 +55,7 @@ function App() {
           <Route path="/letters" element={<Letters />} />
           <Route path="/shadow" element={<Shadow />} />
           <Route path="/clip" element={<Clip />} />
+
           <Route
             path="/box"
             element={
@@ -70,6 +75,9 @@ function App() {
           />
         </Routes>
       </main>
+      <Routes>
+        <Route path="/sizeerror" element={<SizeError />} />
+      </Routes>
     </div>
   );
 }
