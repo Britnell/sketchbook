@@ -6,7 +6,8 @@ export default function () {
 
   useEffect(() => {
     const move = (ev) => {
-      const pos = (ev.x / window.innerWidth) * 100;
+      let pos = (ev.x / window.innerWidth) * 100;
+      pos = Math.floor(pos * 10) / 10;
       ref.current.style.setProperty("--mouse-x", `${pos}%`);
     };
     document.addEventListener("mousemove", move);

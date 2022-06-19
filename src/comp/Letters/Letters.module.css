@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;900&display=swap");
 
-h1 {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-main {
+.container {
   font-family: "Inconsolata", "Courier New", Courier, monospace;
   /* margin-bottom: 20rem; */
   min-height: 50vh;
   font-size: 1.2rem;
 }
+
+.container h2 {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .glitch {
   display: inline-block;
 }
@@ -26,7 +28,6 @@ main {
 }
 
 .capital {
-  /* display: inline-block; */
 }
 
 .bold {

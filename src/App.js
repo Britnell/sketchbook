@@ -9,6 +9,9 @@ import Shadow from "./comp/Shadow";
 import Buttons from "./comp/Buttons";
 import Clip from "./comp/Clip";
 import SizeError from "./comp/SizeError";
+import Transition from "./comp/Transition";
+import Bling from "./comp/Bling";
+import Count from "./comp/Count";
 
 function App() {
   return (
@@ -43,6 +46,15 @@ function App() {
             <li>
               <Link to="/sizeerror">Css width errrors</Link>
             </li>
+            <li>
+              <Link to="/transition">Transition</Link>
+            </li>
+            <li>
+              <Link to="/count">count</Link>
+            </li>
+            <li>
+              <Link to="/bling">bling</Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -55,6 +67,9 @@ function App() {
           <Route path="/letters" element={<Letters />} />
           <Route path="/shadow" element={<Shadow />} />
           <Route path="/clip" element={<Clip />} />
+          <Route path="/transition" element={<Transition />} />
+          <Route path="/count" element={<Count />} />
+          <Route path="/bling" element={<Bling />} />
 
           <Route
             path="/box"

@@ -26,7 +26,7 @@ const Carousel = () => {
       <div className={styles.cube} ref={cubeRef} onClick={spin}>
         <div className={styles.front}>
           <div>FRONT</div>
-          <div>FRONT</div>
+          <div>"[ CLICK ME ]"</div>
           <div>FRONT</div>
         </div>
         <div className={styles.back}>

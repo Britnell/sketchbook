@@ -11,7 +11,7 @@ import Radial from "./radial";
 
 const Letters = () => {
   return (
-    <div style={{ fontSize: "24px" }}>
+    <div className={styles.container} style={{ fontSize: "24px" }}>
       <p style={{ fontSize: "120px" }}>
         <Capital>Storm on the Capital</Capital>
         <Capital>Lorem ipsum dolor sit amet</Capital>
