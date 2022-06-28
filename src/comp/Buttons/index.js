@@ -20,7 +20,7 @@ function Button3D({ onClick }) {
 }
 
 export default function Page() {
-  const click = () => console.log(" CLICK ");
+  // const click = () => console.log(" CLICK ");
   return (
     <>
       <div className={styles.container}>
@@ -62,6 +62,9 @@ export default function Page() {
             bottom
           </div>
         </div>
+
+        <h4>Comp</h4>
+        <Button3D />
       </div>
     </>
   );

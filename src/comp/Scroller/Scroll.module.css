@@ -1,0 +1,13 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.section {
+  height: 200px;
+  background-color: rgb(240, 153, 153);
+  /* position: absolute; */
+  --pos: calc((var(--s, var(--x)) - 50) * 2%);
+  transform: translateX(var(--pos));
+  transition: transform 0.1s linear;
+}

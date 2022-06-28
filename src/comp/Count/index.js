@@ -1,48 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import styles from "./Count.module.scss";
+import useBezier from "./useBezier";
 
-const intvl = 0.02; // 5ms interval
-// if (state.ref.current) state.ref.current.style.setProperty(name, x);
-
-const useStraight = (ref) => {
-  const timer = useRef();
-
-  const start = (name = "--x", T = 1.0, unit = "") => {
-    const steps = T / intvl;
-    const perStep = 100 / steps;
-
-    if (timer.current) {
-      clearInterval(timer.current);
-      timer.current = 0;
-    }
-
-    let x = 0;
-    timer.current = setInterval(() => {
-      x += perStep;
-      if (x >= 100) {
-        x = 100;
-        clearInterval(timer.current);
-      }
-      if (ref.current) ref.current.style.setProperty(name, x + unit);
-    }, intvl * 1000);
-  };
-
-  return { start };
-};
-
-const Count = () => {
+const LinearEx = () => {
   const ref = useRef();
-  const ctr = useStraight(ref);
+  const ctr = useBezier(ref);
 
-  const start = () => {
-    // straight js counter
-    ctr.start("--x", 1.0);
-  };
+  const start = () => ctr.start({ T: 1.0, easing: "linear" });
 
   return (
     <div ref={ref}>
-      <div>x</div>
-      <h2>countup</h2>
+      <h2>Linear</h2>
       <button onClick={start}>Start</button>
       <div className={styles.bar}>
         <div></div>
@@ -51,32 +19,31 @@ const Count = () => {
   );
 };
 
-export default Count;
+const BezierEx = () => {
+  const ref = useRef();
+  const ctr = useBezier(ref);
 
-const useCounter = (ref, name) => {
-  //
-  const timer = useRef();
+  const start = () => ctr.start({ T: 1.0, bezier: [1, 0, 0, 1] });
 
-  const [state, setState] = useState({
-    active: false,
-  });
-
-  const start = (T = 1.0) => {
-    // using fixed period for framerate close to 60ps
-    const steps = (T * 1000) / intvl;
-    const magPerStep = 100 / steps;
-
-    setState({ ...state, active: true, T, val: 0, mag: magPerStep });
-  };
-
-  useEffect(() => {
-    console.log("\t<Counter ", state);
-    if (!state.active) return;
-
-    setTimeout(() => {
-      console.log(" :t ", state);
-    }, intvl);
-  }, [state]);
-
-  return { start };
+  return (
+    <div ref={ref}>
+      <h3>Bezier</h3>
+      <button onClick={start}>Start</button>
+      <div className={styles.bar}>
+        <div></div>
+      </div>
+    </div>
+  );
 };
+
+const Count = () => {
+  return (
+    <div>
+      <h2>animating css var with js</h2>
+      <LinearEx />
+      <BezierEx />
+    </div>
+  );
+};
+
+export default Count;

@@ -12,6 +12,10 @@ import SizeError from "./comp/SizeError";
 import Transition from "./comp/Transition";
 import Bling from "./comp/Bling";
 import Count from "./comp/Count";
+import Scroll from "./comp/Scroll";
+import Gradient from "./comp/Gradient";
+import Pattern from "./comp/Pattern";
+import Scroller from "./comp/Scroller";
 
 function App() {
   return (
@@ -43,9 +47,9 @@ function App() {
             <li>
               <Link to="/clip">Dynamic Clip Path</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/sizeerror">Css width errrors</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/transition">Transition</Link>
             </li>
@@ -54,6 +58,18 @@ function App() {
             </li>
             <li>
               <Link to="/bling">bling</Link>
+            </li>
+            <li>
+              <Link to="/scroll">scroll</Link>
+            </li>
+            <li>
+              <Link to="/gradient">gradient</Link>
+            </li>
+            <li>
+              <Link to="/pattern">pattern</Link>
+            </li>
+            <li>
+              <Link to="/scroller">scroller</Link>
             </li>
           </ul>
         </nav>
@@ -70,6 +86,10 @@ function App() {
           <Route path="/transition" element={<Transition />} />
           <Route path="/count" element={<Count />} />
           <Route path="/bling" element={<Bling />} />
+          <Route path="/scroll" element={<Scroll />} />
+          <Route path="/gradient" element={<Gradient />} />
+          <Route path="/pattern" element={<Pattern />} />
+          <Route path="/scroller" element={<Scroller />} />
 
           <Route
             path="/box"
@@ -90,9 +110,6 @@ function App() {
           />
         </Routes>
       </main>
-      <Routes>
-        <Route path="/sizeerror" element={<SizeError />} />
-      </Routes>
     </div>
   );
 }
