@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.sc1 {
+  height: 200px;
+}
+
 .section {
   height: 200px;
   background-color: rgb(240, 153, 153);
@@ -10,4 +14,28 @@
   --pos: calc((var(--s, var(--x)) - 50) * 2%);
   transform: translateX(var(--pos));
   transition: transform 0.1s linear;
+}
+
+.pacman {
+  --w: 100px;
+  width: var(--w);
+  height: var(--w);
+  --pc: 0px;
+  /* --pc: calc(var(--s)); */
+  /* background-color: rgb(249, 211, 46); */
+  --col: rgb(249, 211, 46);
+  --mouth: calc(var(--p) * 4.5deg);
+  background-image: radial-gradient(black 5px, transparent 0),
+    conic-gradient(
+      var(--col) calc(90deg - var(--mouth)),
+      transparent calc(90deg - var(--mouth)),
+      transparent calc(90deg + var(--mouth)),
+      var(--col) 0deg
+    );
+  background-position: 0 -25px, 0 0;
+  border-radius: 50%;
+
+  --pos: calc((var(--s) - 50) * 6% + 50%);
+  transform: translateX(var(--pos));
+  transition: all 0.1s linear;
 }

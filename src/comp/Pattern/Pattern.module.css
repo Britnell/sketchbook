@@ -1,5 +1,10 @@
 .container {
-  height: 100vh;
+  display: grid;
+  gap: 50px;
+}
+
+.p1 {
+  height: 80vh;
   background-color: grey;
 
   background: url("data:image/svg+xml,\
@@ -11,6 +16,50 @@
             transform-origin: center;' \
       >a</text>\
     </svg>");
-  border: 1px solid red;
-  background-size: 200px;
+  background-size: 200px 200px;
+}
+
+.p2 {
+  height: 80vh;
+  background-color: grey;
+
+  background: url("data:image/svg+xml,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+      <style>@keyframes roll { to { transform: rotate(270deg)} }</style>\
+      <path style='stroke:black; \
+        stroke-width: 4; \
+      animation: roll 2s infinite ease-in-out alternate; \
+      transform-origin: center;' \
+        d='M 0,50 100,50'  \
+       />\
+    </svg>");
+  background-size: 100px 100px;
+}
+
+.p3 {
+  height: 80vh;
+
+  background-image: url("data:image/svg+xml,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+      <style>@keyframes roll { to { transform: rotate(270deg)} }</style>\
+      <path style='stroke:black; \
+        stroke-width: 4; \
+      animation: roll 2s infinite ease-in-out alternate; \
+      transform-origin: center;' \
+        d='M 0,30 100,30'  \
+       />\
+    </svg>"),
+    url("data:image/svg+xml,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>\
+      <style>@keyframes roll {\
+             from {transform: rotate(-90deg) } \
+            to { transform: rotate(-360deg)} } </style>\
+      <path style='stroke:black; \
+        stroke-width: 4; \
+      animation: roll 2s infinite ease-in-out alternate; \
+      transform-origin: center;' \
+        d='M 0,45 100,45'  \
+       />\
+    </svg>");
+  background-size: 100px 100px, 180px 180px;
 }
