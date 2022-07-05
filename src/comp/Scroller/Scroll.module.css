@@ -42,7 +42,7 @@
   background-position: 0 -25px, 0 0;
   border-radius: 50%;
 
-  --pos: calc((var(--p) - 50) * 6% + 50%);
+  --pos: calc((var(--p) - 50) * 10% + 50%);
   transform: translateX(var(--pos));
   transition: all 0.1s linear;
 }
