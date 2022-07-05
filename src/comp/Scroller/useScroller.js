@@ -39,18 +39,16 @@ const useScroller = (targets) => {
 
     const checkItemScroll = (item) => {
       const rec = item.ref.current.getBoundingClientRect();
-      const top = rec.top;
-      const h = rec.height;
-      const hWin = window.innerHeight;
-      let perc;
+      const itemWindow = window.innerHeight + rec.height;
 
-      if (top > hWin) perc = 0;
-      else if (top > -h) {
-        perc = 1 - (top + h) / (hWin + h);
-      } else perc = 1;
-      perc = Math.floor(perc * 100);
+      let scroll;
+      scroll = window.innerHeight - rec.top;
+      if (rec.top > window.innerHeight) scroll = 0;
+      if (scroll > itemWindow) scroll = itemWindow;
 
       // apply classes above / below threshold
+      const perc = Math.floor((100 * scroll) / itemWindow);
+
       if (item.threshold) {
         const above = perc < item.threshold;
         if (above !== item.isAboveThreshold) {
@@ -66,7 +64,10 @@ const useScroller = (targets) => {
       }
 
       // write prop
-      item.ref.current.style.setProperty(item.varName, perc);
+      item.ref.current.style.setProperty("--s", scroll);
+      item.ref.current.style.setProperty("--s-max", itemWindow);
+      item.ref.current.style.setProperty("--p", perc);
+
       if (item.variator) {
         const variators = item.variator(perc);
         variators.forEach((variator) => {
@@ -114,6 +115,7 @@ const useScroller = (targets) => {
 
       // * in event
       observedItem.watch = true;
+      checkItemScroll(observedItem);
     };
 
     const Observer = new IntersectionObserver(observeCallback, {

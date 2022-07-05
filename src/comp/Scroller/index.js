@@ -10,8 +10,9 @@ const Scroller = () => {
   useScroller([
     {
       ref: elRef,
-      varName: "--x",
       threshold: 50,
+      classAbove: styles.above,
+      classBelow: styles.below,
     },
     {
       ref: secRef,
@@ -25,7 +26,7 @@ const Scroller = () => {
         const val = cycle ? perc % p : p - (perc % p);
         return [
           {
-            name: "--p",
+            name: "--a",
             val,
           },
         ];
@@ -46,6 +47,7 @@ const Scroller = () => {
         tristique egestas neque hendrerit. Nunc massa leo, sodales at nisl
         finibus, porta sagittis magna. Nunc ultrices rutrum viverra.
       </p>
+
       <div ref={elRef} className={styles.sc1}></div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -57,7 +59,7 @@ const Scroller = () => {
         tristique egestas neque hendrerit. Nunc massa leo, sodales at nisl
         finibus, porta sagittis magna. Nunc ultrices rutrum viverra.
       </p>
-      <div ref={secRef} className={styles.section + " second"}></div>
+      <div ref={secRef} className={styles.slide + " second"}></div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
         interdum maximus libero, in ornare nunc tincidunt sit amet. Ut efficitur
