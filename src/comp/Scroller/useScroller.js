@@ -10,20 +10,20 @@ const getRaf = () =>
 const initObserveItem = ({
   ref,
   varName = "--s",
-  threshold,
-  classBelow = "sc-below",
-  classAbove = "sc-above",
+  classChecker,
+  classTrue = "sc-true",
+  classFalse = "sc-false",
   variator,
   disableObserver = false,
 }) => ({
   ref,
   varName,
-  threshold,
-  classBelow,
-  classAbove,
+  classChecker,
+  classTrue,
+  classFalse,
   variator,
   disableObserver,
-  // isAboveThreshold: false,
+  // lastCheck: false,
 });
 
 const useScroller = (targets) => {
@@ -39,33 +39,32 @@ const useScroller = (targets) => {
 
     const checkItemScroll = (item) => {
       const rec = item.ref.current.getBoundingClientRect();
-      const itemWindow = window.innerHeight + rec.height;
+      const scrollMax = window.innerHeight + rec.height;
 
       let scroll;
       scroll = window.innerHeight - rec.top;
       if (rec.top > window.innerHeight) scroll = 0;
-      if (scroll > itemWindow) scroll = itemWindow;
+      if (scroll > scrollMax) scroll = scrollMax;
 
-      // apply classes above / below threshold
-      const perc = Math.floor((100 * scroll) / itemWindow);
+      const perc = Math.floor((100 * scroll) / scrollMax);
 
-      if (item.threshold) {
-        const above = perc < item.threshold;
-        if (above !== item.isAboveThreshold) {
-          if (above) {
-            item.ref.current.classList.add(item.classAbove);
-            item.ref.current.classList.remove(item.classBelow);
+      if (item.classChecker) {
+        const check = item.classChecker({ scroll, scrollMax, perc });
+        if (check !== item.lastCheck) {
+          if (check) {
+            item.ref.current.classList.add(item.classFalse);
+            item.ref.current.classList.remove(item.classTrue);
           } else {
-            item.ref.current.classList.remove(item.classAbove);
-            item.ref.current.classList.add(item.classBelow);
+            item.ref.current.classList.remove(item.classFalse);
+            item.ref.current.classList.add(item.classTrue);
           }
-          item.isAboveThreshold = above;
+          item.lastCheck = check;
         }
       }
 
       // write prop
       item.ref.current.style.setProperty("--s", scroll);
-      item.ref.current.style.setProperty("--s-max", itemWindow);
+      item.ref.current.style.setProperty("--s-max", scrollMax);
       item.ref.current.style.setProperty("--p", perc);
 
       if (item.variator) {

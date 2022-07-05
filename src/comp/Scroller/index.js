@@ -10,9 +10,9 @@ const Scroller = () => {
   useScroller([
     {
       ref: elRef,
-      threshold: 50,
-      classAbove: styles.above,
-      classBelow: styles.below,
+      classChecker: ({ scroll, scrollMax, perc }) => perc > 50,
+      classTrue: styles.above,
+      classFalse: styles.below,
     },
     {
       ref: secRef,
