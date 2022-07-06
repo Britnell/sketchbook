@@ -13,6 +13,8 @@ const Scroller = () => {
       classChecker: ({ scroll, scrollMax, perc }) => perc > 50,
       classTrue: styles.above,
       classFalse: styles.below,
+      setScroll: false,
+      setPercentage: false,
     },
     {
       ref: secRef,

@@ -7,28 +7,29 @@ const getRaf = () =>
   window.msRequestAnimationFrame ||
   window.oRequestAnimationFrame;
 
-const initObserveItem = ({
+const defaultValues = ({
   ref,
-  varName = "--s",
   classChecker,
-  classTrue = "sc-true",
-  classFalse = "sc-false",
+  classTrue = "scroll-true",
+  classFalse = "scroll-false",
   variator,
   disableObserver = false,
+  setScroll = true,
+  setPercentage = true,
 }) => ({
   ref,
-  varName,
   classChecker,
   classTrue,
   classFalse,
   variator,
   disableObserver,
-  // lastCheck: false,
+  setScroll,
+  setPercentage,
 });
 
 const useScroller = (targets) => {
   const [observed, setObserved] = useState(() =>
-    targets.map((it) => initObserveItem(it))
+    targets.map((it) => defaultValues(it))
   );
 
   // * * * * * * *
@@ -63,9 +64,11 @@ const useScroller = (targets) => {
       }
 
       // write prop
-      item.ref.current.style.setProperty("--s", scroll);
-      item.ref.current.style.setProperty("--s-max", scrollMax);
-      item.ref.current.style.setProperty("--p", perc);
+      if (item.setScroll) {
+        item.ref.current.style.setProperty("--s", scroll);
+        item.ref.current.style.setProperty("--s-max", scrollMax);
+      }
+      if (item.setPercentage) item.ref.current.style.setProperty("--p", perc);
 
       if (item.variator) {
         const variators = item.variator(perc);
