@@ -17,6 +17,7 @@ import Gradient from "./comp/Gradient";
 import Pattern from "./comp/Pattern";
 import Scroller from "./comp/Scroller";
 import Secrets from "./comp/Secrets";
+import Rolling from "./comp/Rolling";
 
 function App() {
   return (
@@ -75,6 +76,9 @@ function App() {
             <li>
               <Link to="/secrets">secrets</Link>
             </li>
+            <li>
+              <Link to="/rolling">rolling</Link>
+            </li>
           </ul>
         </nav>
       </header>
@@ -95,6 +99,7 @@ function App() {
           <Route path="/pattern" element={<Pattern />} />
           <Route path="/scroller" element={<Scroller />} />
           <Route path="/secrets" element={<Secrets />} />
+          <Route path="/rolling" element={<Rolling />} />
 
           <Route
             path="/box"

@@ -28,9 +28,7 @@ const defaultValues = ({
 });
 
 const useScroller = (targets) => {
-  const [observed, setObserved] = useState(() =>
-    targets.map((it) => defaultValues(it))
-  );
+  const [observed] = useState(() => targets.map((it) => defaultValues(it)));
 
   // * * * * * * *
   useEffect(() => {

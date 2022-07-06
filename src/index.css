@@ -16,3 +16,14 @@ code {
 * {
   box-sizing: border-box;
 }
+
+main {
+  overflow: hidden;
+  padding-left: 4rem;
+}
+
+.sc-false {
+}
+
+.sc-true {
+}

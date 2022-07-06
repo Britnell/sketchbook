@@ -6,6 +6,7 @@ const Scroller = () => {
   const elRef = useRef();
   const secRef = useRef();
   const pacRef = useRef();
+  const rollRef = useRef();
 
   useScroller([
     {
@@ -18,6 +19,14 @@ const Scroller = () => {
     },
     {
       ref: secRef,
+    },
+    {
+      ref: rollRef,
+      classChecker: ({ scroll, scrollMax, perc }) => perc < 20,
+      classTrue: styles.rollIn,
+      classFalse: styles.rollOut,
+      setScroll: false,
+      setPercentage: false,
     },
     {
       ref: pacRef,
@@ -83,6 +92,15 @@ const Scroller = () => {
         tristique egestas neque hendrerit. Nunc massa leo, sodales at nisl
         finibus, porta sagittis magna. Nunc ultrices rutrum viverra.
       </p>
+      <div ref={rollRef} className={styles.roller}>
+        <span className={styles.q1}>
+          <span className={styles.q2}>
+            <span className={styles.q3}>
+              <span className={styles.q4}>B</span>
+            </span>
+          </span>
+        </span>
+      </div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
         interdum maximus libero, in ornare nunc tincidunt sit amet. Ut efficitur

@@ -46,3 +46,144 @@
   transform: translateX(var(--pos));
   transition: all 0.1s linear;
 }
+
+/*  Roller letter */
+
+.roller {
+  position: relative;
+  font-size: 80px;
+}
+
+.roller span {
+  display: inline-block;
+  line-height: 0.83;
+}
+
+.rollIn .q1 {
+  animation: in-one 1s ease-in-out both reverse;
+}
+.rollIn .q2 {
+  animation: in-two 1s ease-in-out both reverse;
+}
+.rollIn .q3 {
+  animation: in-three 1s ease-in-out both reverse;
+}
+.rollIn .q4 {
+  animation: in-four 1s ease-in-out both reverse;
+}
+
+.rollOut .q1 {
+  animation: out-one 1s ease-in-out both;
+}
+.rollOut .q2 {
+  animation: out-two 1s ease-in-out both;
+}
+.rollOut .q3 {
+  animation: out-three 1s ease-in-out both;
+}
+.rollOut .q4 {
+  animation: out-four 1s ease-in-out both;
+}
+
+.rollOut {
+}
+
+@keyframes out-one {
+  0% {
+    transform-origin: 0% 100%;
+    transform: rotate(0);
+  }
+  25%,
+  to {
+    transform-origin: 0% 100%;
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes out-two {
+  0%,
+  25% {
+    transform-origin: 0% 0%;
+    transform: rotate(0);
+  }
+  50%,
+  to {
+    transform-origin: 0% 0%;
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes out-three {
+  0%,
+  50% {
+    transform-origin: 100% 0%;
+    transform: rotate(0);
+  }
+  75%,
+  to {
+    transform-origin: 100% 0%;
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes out-four {
+  0%,
+  75% {
+    transform-origin: 100% 100%;
+    transform: rotate(0);
+  }
+  to {
+    transform-origin: 100% 100%;
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes in-one {
+  0% {
+    transform-origin: 0% 100%;
+    transform: rotate(0);
+  }
+  25%,
+  to {
+    transform-origin: 0% 100%;
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes in-two {
+  0%,
+  25% {
+    transform-origin: 0% 0%;
+    transform: rotate(0);
+  }
+  50%,
+  to {
+    transform-origin: 0% 0%;
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes in-three {
+  0%,
+  50% {
+    transform-origin: 100% 0%;
+    transform: rotate(0);
+  }
+  75%,
+  to {
+    transform-origin: 100% 0%;
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes in-four {
+  0%,
+  75% {
+    transform-origin: 100% 100%;
+    transform: rotate(0);
+  }
+  to {
+    transform-origin: 100% 100%;
+    transform: rotate(-90deg);
+  }
+}
