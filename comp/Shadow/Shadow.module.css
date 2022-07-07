@@ -1,5 +1,25 @@
 .shadow {
   font-size: 120px;
   color: hsl(193, 45%, 82%);
-  /* text-shadow: 4px 4px black; */
+  position: relative;
+
+  --f: -10px;
+  --x: calc(var(--mx) * var(--f));
+  --y: calc(var(--my) * var(--f));
+  text-shadow: var(--x) var(--y) black;
+
+  left: calc(0px - var(--x));
+  top: calc(0px - var(--y));
+}
+
+.light {
+  font-size: 120px;
+  color: hsl(193, 45%, 82%);
+  position: relative;
+
+  --f: -10px;
+  --x: calc(var(--mx) * var(--f));
+  --y: calc(var(--my) * var(--f));
+  --blur: calc(var(--mag) * 3px);
+  text-shadow: var(--x) var(--y) var(--blur) black;
 }

@@ -1,69 +1,39 @@
 import styles from "./Shadow.module.css";
 import { useState, useEffect } from "react";
 
-export default function Page() {
-  return (
-    <div>
-      <Shadow>Look AROUND you</Shadow>
-    </div>
-  );
-}
 function Shadow({ children }) {
   const [mouse, setMouse] = useState({});
-  //   const [pos, setPos] = useState({});
 
   useEffect(() => {
-    const move = (ev) => {
-      setMouse({
-        x: ev.x,
-        y: ev.y,
-      });
+    const onMove = (ev) => {
+      const MX = (ev.x / window.innerWidth - 0.5) * 2;
+      const MY = (ev.y / window.innerHeight - 0.5) * 2;
+      const mag = Math.sqrt(MX * MX + MY * MY);
+      document.body.style.setProperty("--mx", MX);
+      document.body.style.setProperty("--my", MY);
+      document.body.style.setProperty("--mag", mag);
+
+      // console.log(MX, MY);
+      const factor = 50;
+
+      const facB = 60;
+      const B = {
+        x: Math.floor(MX / facB),
+        y: Math.floor(MY / facB),
+      };
     };
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
+
+    window.addEventListener("mousemove", onMove);
+    return () => window.removeEventListener("mousemove", onMove);
   }, []);
-
-  const vX = mouse.x - window.innerWidth / 2;
-  const vY = mouse.y - window.innerHeight / 2;
-
-  const fact = 50;
-  const A = {
-    x: Math.floor(vX / fact),
-    y: Math.floor(vY / fact),
-  };
-
-  const facB = 60;
-  const B = {
-    x: Math.floor(vX / facB),
-    y: Math.floor(vY / facB),
-  };
-  const blur = Math.sqrt(vX * vX + vY * vY) / 50;
 
   return (
     <>
-      <h1
-        style={{
-          position: "relative",
-          textShadow: `${-A.x}px ${-A.y}px black`,
-          left: `${A.x}px`,
-          top: `${A.y}px`,
-        }}
-        className={styles.shadow}
-      >
-        {children}
-      </h1>
+      <h1 className={styles.shadow}>Look AROUND you</h1>
       <p>alsdkjasldkj</p>
-      <h1
-        style={{
-          position: "relative",
-          textShadow: `${-B.x}px ${-B.y}px ${blur}px black`,
-          //   left: `${B.x}px`,
-          //   top: `${B.y}px`,
-        }}
-        className={styles.shadow}
-      >
-        The Rocky Horror Picture Show
-      </h1>
+      <h1 className={styles.light}>The Rocky Horror Picture Show</h1>
     </>
   );
 }
+
+export default Shadow;
