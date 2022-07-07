@@ -9,6 +9,8 @@ const Pattern = () => {
       <div className={styles.p2}></div>
       <p>double background image url + background-size</p>
       <div className={styles.p3}></div>
+      <p>Animated background grad</p>
+      <div className={styles.dots}></div>
     </div>
   );
 };

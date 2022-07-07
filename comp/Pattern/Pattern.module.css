@@ -58,3 +58,9 @@
     </svg>");
   background-size: 100px 100px, 180px 180px;
 }
+
+.dots {
+  height: 80vh;
+
+  /* background-image: ; */
+}

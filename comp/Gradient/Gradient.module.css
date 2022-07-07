@@ -42,7 +42,7 @@
 }
 
 .cut .screen {
-  font-size: 150px;
+  font-size: 10vw;
   font-weight: 900;
   background-color: white;
   color: black;
@@ -51,7 +51,7 @@
 }
 
 .cut .mutliply {
-  font-size: 150px;
+  font-size: 10vw;
   font-weight: 900;
   background-color: black;
   color: white;
@@ -61,7 +61,7 @@
 
 .cut .red,
 .cut .white {
-  font-size: 350px;
+  font-size: 20vw;
   font-weight: 900;
   background-color: white;
   color: black;
