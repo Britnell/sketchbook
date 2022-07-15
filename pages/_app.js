@@ -42,6 +42,15 @@ function MyApp({ Component, pageProps }) {
             <li>
               <Link href="transition">transition</Link>
             </li>
+            <li>
+              <Link href="perspective">perspective</Link>
+            </li>
+            <li>
+              <Link href="perspective-two">perspective 2</Link>
+            </li>
+            <li>
+              <Link href="perspective-scroll">perspective scroll</Link>
+            </li>
           </ul>
         </nav>
       </header>
