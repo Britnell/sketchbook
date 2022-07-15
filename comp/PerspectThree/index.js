@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import useScroller from "../../lib/useScroller";
+import useScroller from "../lib/useScroller";
 import styles from "./Perpective.module.scss";
 
 const Page = () => {
