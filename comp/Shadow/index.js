@@ -6,8 +6,8 @@ function Shadow({ children }) {
 
   useEffect(() => {
     const onMove = (ev) => {
-      const MX = (ev.x / window.innerWidth - 0.5) * 2;
-      const MY = (ev.y / window.innerHeight - 0.5) * 2;
+      const MX = (ev.x / window?.innerWidth - 0.5) * 2;
+      const MY = (ev.y / window?.innerHeight - 0.5) * 2;
       const mag = Math.sqrt(MX * MX + MY * MY);
       document.body.style.setProperty("--mx", MX);
       document.body.style.setProperty("--my", MY);
