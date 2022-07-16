@@ -1,6 +1,6 @@
 {
-  "name": "next-netlify-starter",
-  "version": "0.5.0",
+  "name": "sketchbook",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,5 +16,8 @@
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.12.2"
-  }
+  },
+  "repository": "https://github.com/Britnell/sketchbook.git",
+  "author": "Tommy <thomas@madebyon.com>",
+  "license": "MIT"
 }
