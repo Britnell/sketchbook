@@ -15,52 +15,54 @@ const Page = () => {
   }, [containerRef]);
 
   return (
-    <div ref={containerRef} className={styles.container}>
-      <div className={styles.left}>
-        <div>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+    <main>
+      <div ref={containerRef} className={styles.container}>
+        <div className={styles.left}>
+          <div>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+          </div>
+          <div>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+          </div>
         </div>
-        <div>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+        <div className={styles.right}>
+          <div>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+          </div>
+          <div>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+            <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
+          </div>
         </div>
       </div>
-      <div className={styles.right}>
-        <div>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-        </div>
-        <div>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-          <h1>Quick Brown Fox Jumps Over Lazy Dog</h1>
-        </div>
-      </div>
-    </div>
+    </main>
   );
 };
 

@@ -2,7 +2,7 @@ import styles from "./Gradient.module.css";
 
 const Gradient = () => {
   return (
-    <>
+    <main>
       <p>"animate" a gradient by animating "background-position"</p>
       <div className={styles.gradient}>Gradie</div>
       <p>gradient background text as per Kevin</p>
@@ -21,7 +21,7 @@ const Gradient = () => {
         <span className={styles.white}>TEXT</span>
         <span className={styles.red}>TEXT</span>
       </div>
-    </>
+    </main>
   );
 };
 export default Gradient;

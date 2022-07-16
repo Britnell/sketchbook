@@ -6,7 +6,7 @@ const Rolling = () => {
   const intoRef = useRef();
 
   return (
-    <div>
+    <main>
       <p>v1 rolling letter w animation on nested spans</p>
       <div className={styles.container}>
         <span className={styles.q1}>
@@ -48,7 +48,7 @@ const Rolling = () => {
           </span>
         </span>
       </div>
-    </div>
+    </main>
   );
 };
 

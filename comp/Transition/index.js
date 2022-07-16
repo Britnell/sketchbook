@@ -10,7 +10,7 @@ const delayLink = (ev) => {
 };
 const Transition = () => {
   return (
-    <div>
+    <main>
       <header className={styles.header}>
         <h1>
           <div className={styles.blob}>&nbsp;</div>Transition
@@ -40,7 +40,7 @@ const Transition = () => {
           Buy Now
         </a>
       </div>
-    </div>
+    </main>
   );
 };
 

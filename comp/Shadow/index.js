@@ -28,11 +28,11 @@ function Shadow({ children }) {
   }, []);
 
   return (
-    <>
+    <main>
       <h1 className={styles.shadow}>Look AROUND you</h1>
       <p>alsdkjasldkj</p>
       <h1 className={styles.light}>The Rocky Horror Picture Show</h1>
-    </>
+    </main>
   );
 }
 

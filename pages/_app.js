@@ -8,8 +8,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className={styles.layout}>
       <Head>
-        <title>My web dev sketchbook</title>
-        <meta name="description" content="My front end dev sketchbook" />
+        <title>Web dev sketchbook</title>
+        <meta
+          name="description"
+          content="I'm a front-end web developer, and this is my sketchbook"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
@@ -54,9 +57,7 @@ function MyApp({ Component, pageProps }) {
           </ul>
         </nav>
       </header>
-      <main>
-        <Component {...pageProps} />
-      </main>
+      <Component {...pageProps} />
     </div>
   );
 }

@@ -22,7 +22,7 @@ const Page = () => {
   // }, [scrollRef]);
 
   return (
-    <>
+    <main>
       <div className={styles.header}>
         <h1>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -86,7 +86,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

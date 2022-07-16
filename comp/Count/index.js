@@ -38,11 +38,13 @@ const BezierEx = () => {
 
 const Count = () => {
   return (
-    <div>
-      <h2>animating css var with js</h2>
-      <LinearEx />
-      <BezierEx />
-    </div>
+    <main>
+      <div>
+        <h2>animating css var with js</h2>
+        <LinearEx />
+        <BezierEx />
+      </div>
+    </main>
   );
 };
 

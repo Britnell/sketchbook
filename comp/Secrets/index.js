@@ -2,7 +2,7 @@ import styles from "./Secrets.module.css";
 
 const Secrets = () => {
   return (
-    <div>
+    <main>
       <h1>CSS Secrets - L.V. - notes</h1>
       <h3>Gradient Patterns</h3>
       <div className={styles.patterns}>
@@ -106,7 +106,7 @@ const Secrets = () => {
         tristique egestas neque hendrerit. Nunc massa leo, sodales at nisl
         finibus, porta sagittis magna. Nunc ultrices rutrum viverra.
       </p>
-    </div>
+    </main>
   );
 };
 
