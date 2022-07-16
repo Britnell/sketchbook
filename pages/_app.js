@@ -58,6 +58,13 @@ function MyApp({ Component, pageProps }) {
         </nav>
       </header>
       <Component {...pageProps} />
+      <footer>
+        Hi I'm Tommy and this is my web-development sketchbook to try out ideas.{" "}
+        <a href="https://github.com/Britnell/sketchbook">
+          This is the git repo /sketchbook
+        </a>
+        .
+      </footer>
     </div>
   );
 }
