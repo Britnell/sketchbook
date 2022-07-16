@@ -37,7 +37,7 @@ const useScroller = (targets) => {
     let last = 0;
 
     const checkItemScroll = (item) => {
-      if (item.ref.current) return;
+      if (!item.ref.current) return;
 
       const rec = item.ref.current.getBoundingClientRect();
       const scrollMax = window.innerHeight + rec.height;
