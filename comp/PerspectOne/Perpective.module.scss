@@ -1,0 +1,46 @@
+.container {
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #ddd;
+
+  overflow-x: hidden;
+
+  --my: 0;
+}
+
+.left,
+.right {
+  //   height: 100vh;
+  //   min-width: 800px;
+  white-space: nowrap;
+
+  display: inline-block;
+  position: absolute;
+  border: 1px solid black;
+  padding: 18px 8px;
+
+  top: calc(50% - 200px);
+  --p: 100px;
+
+  --z: calc(var(--my) * +800px - 1050px);
+  --x: 20px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.right {
+  left: 50%;
+  transform-origin: left 50%;
+  transform: perspective(var(--p))
+    translate3d(calc(var(--x) * 1), -50px, var(--z)) rotateY(-60deg);
+}
+
+.left {
+  right: 50%;
+  transform-origin: right 50%;
+  transform: perspective(var(--p))
+    translate3d(calc(var(--x) * -1), -50px, var(--z)) rotateY(60deg);
+}
