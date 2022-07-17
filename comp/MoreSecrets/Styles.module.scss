@@ -1,0 +1,44 @@
+// https://fonts.google.com/knowledge/using_type/loading_variable_fonts_on_the_web
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&display=swap");
+
+.lineheading {
+  //   display: block;
+  --col: black;
+  display: flex;
+  align-items: center;
+  color: var(--col);
+  gap: 24px;
+
+  &:before,
+  &:after {
+    content: "";
+    // flex-grow: 1;
+    height: 1px;
+    background-color: var(--col);
+  }
+
+  &:before {
+    flex-grow: calc(var(--mx) * 100);
+  }
+  &::after {
+    flex-grow: calc((1 - var(--mx)) * 100);
+  }
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 60px;
+  font-weight: calc(300 + var(--mx) * 500);
+  font-variation-settings: "wdth" calc(75 + var(--my) * 25);
+}
+
+.variable {
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 60px;
+    font-weight: var(--wg);
+    font-variation-settings: "wdth" var(--wd);
+  }
+
+  input {
+    width: 50%;
+  }
+}

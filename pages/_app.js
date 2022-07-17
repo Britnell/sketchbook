@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }) {
     "perspective-scroll",
     "navbar",
     "tooltip",
+    "moresecrets",
   ];
   return (
     <div>
