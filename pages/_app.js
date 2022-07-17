@@ -5,8 +5,23 @@ import styles from "../styles/Layout.module.scss";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
+  const pages = [
+    "gradient",
+    "count",
+    "letters",
+    "pattern",
+    "rolling",
+    "secrets",
+    "shadow",
+    "transition",
+    "perspective",
+    "perspective-two",
+    "perspective-scroll",
+    "navbar",
+    "tooltip",
+  ];
   return (
-    <div className={styles.layout}>
+    <div>
       <Head>
         <title>Web dev sketchbook</title>
         <meta
@@ -15,45 +30,14 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header>
+      <header className={styles.layout}>
         <nav>
           <ul>
-            <li>
-              <Link href="gradient">gradient</Link>
-            </li>
-            <li>
-              <Link href="count">count</Link>
-            </li>
-            <li>
-              <Link href="letters">letters</Link>
-            </li>
-            <li>
-              <Link href="pattern">pattern</Link>
-            </li>
-            <li>
-              <Link href="rolling">rolling</Link>
-            </li>
-            <li>
-              <Link href="scroller">scroller</Link>
-            </li>
-            <li>
-              <Link href="secrets">secrets</Link>
-            </li>
-            <li>
-              <Link href="shadow">shadow</Link>
-            </li>
-            <li>
-              <Link href="transition">transition</Link>
-            </li>
-            <li>
-              <Link href="perspective">perspective</Link>
-            </li>
-            <li>
-              <Link href="perspective-two">perspective 2</Link>
-            </li>
-            <li>
-              <Link href="perspective-scroll">perspective scroll</Link>
-            </li>
+            {pages.map((page) => (
+              <li key={page}>
+                <Link href={page}>{page}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
@@ -61,7 +45,7 @@ function MyApp({ Component, pageProps }) {
       <footer>
         Hi I'm Tommy and this is my web-development sketchbook to try out ideas.{" "}
         <a href="https://github.com/Britnell/sketchbook">
-          This is the git repo /sketchbook
+          Find the code in the git repo
         </a>
         .
       </footer>
