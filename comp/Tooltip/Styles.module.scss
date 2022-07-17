@@ -1,0 +1,64 @@
+.container {
+  :is(&:hover .tip, button:focus-visible + .tip) {
+    // IN transition
+    opacity: 1;
+  }
+}
+
+.tip {
+  // OUT transition
+  transition: opacity 0.3s linear;
+
+  --tip-background: blue;
+  --tip-color: white;
+  --tip-size: 12px;
+  --tip-inset: 0px;
+  --border-radius: 18px;
+
+  // display: none;
+  opacity: 0;
+  position: absolute;
+
+  width: 300px;
+  height: 100px;
+
+  padding: 12px;
+  border-radius: var(--border-radius);
+
+  background-color: var(--tip-background);
+  color: var(--tip-color);
+
+  transform: translate(0, var(--tip-size));
+
+  &::before {
+    content: "";
+    width: var(--tip-size);
+    height: var(--tip-size);
+    background-color: red; // var(--tip-background);
+
+    position: absolute;
+    top: 0;
+    left: calc(var(--border-radius) + var(--tip-inset));
+    transform: translateY(-100%);
+    z-index: -1;
+
+    background: linear-gradient(
+      45deg,
+      var(--tip-background) 50%,
+      transparent 0
+    );
+  }
+}
+
+.example {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    margin: 20px;
+  }
+}
