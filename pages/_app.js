@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import styles from "../styles/Layout.module.scss";
 import "../styles/globals.css";
+import "../styles/resets.css";
 
 function MyApp({ Component, pageProps }) {
   const pages = [
@@ -47,11 +48,16 @@ function MyApp({ Component, pageProps }) {
       </header>
       <Component {...pageProps} />
       <footer>
-        Hi I'm Tommy and this is my web-development sketchbook to try out ideas.{" "}
-        <a href="https://github.com/Britnell/sketchbook">
-          Find the code in the git repo
-        </a>
-        .
+        <div>
+          <p>
+            Hi I'm Tommy and this is my web-development sketchbook to try out
+            ideas.{" "}
+            <a href="https://github.com/Britnell/sketchbook">
+              Find the code in the git repo
+            </a>
+            .
+          </p>
+        </div>
       </footer>
     </div>
   );
