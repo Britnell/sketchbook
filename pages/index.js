@@ -1,6 +1,7 @@
+import Page from "../comp/Welcome";
 const Home = () => (
   <main>
-    <h1>EMPTY</h1>
+    <Page />
   </main>
 );
 

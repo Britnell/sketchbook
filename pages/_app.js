@@ -21,6 +21,8 @@ function MyApp({ Component, pageProps }) {
     "tooltip",
     "moresecrets",
     "clamp",
+    "outline",
+    "variable",
   ];
   return (
     <div>

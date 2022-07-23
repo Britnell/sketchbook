@@ -1,0 +1,80 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 48px;
+
+  svg {
+    border: 1px solid blue;
+  }
+
+  margin-top: 48px;
+  h3 {
+    font-size: 32px;
+    padding: 12px;
+  }
+}
+
+.one {
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.one svg circle {
+  --l: 63;
+}
+.one svg text {
+  --l: 196;
+}
+
+.one svg :is(circle, text) {
+  fill: none;
+  stroke: black;
+
+  stroke-dasharray: var(--l);
+  stroke-dashoffset: var(--l);
+
+  animation: dash 4s linear infinite alternate;
+}
+
+.two {
+}
+
+@keyframes svg_dash {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+svg.animate_outline > * {
+  fill: none;
+  stroke: black;
+
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+
+  animation: svg_dash 2s ease-out infinite alternate;
+}
+
+.outlineScroll {
+  p {
+    font-size: 28px;
+  }
+  svg {
+    width: 300px;
+  }
+  svg > * {
+    fill: none;
+    stroke: black;
+
+    stroke-dasharray: 1;
+    --out: calc(1 - var(--v));
+    stroke-dashoffset: var(--out);
+    transition: stroke-dashoffset 0.3s ease-out;
+  }
+}

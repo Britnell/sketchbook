@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&display=swap");
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 100px;
+  & > p {
+    font-size: 24px;
+  }
+}
+.move {
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10vw;
+    text-align: center;
+
+    --weight: calc(300 + var(--my) * 500);
+    --width: calc(75 + var(--mx) * 25);
+    font-weight: var(--weight);
+    font-variation-settings: "wdth" var(--width);
+  }
+}
+
+.match {
+  font-family: "Open Sans", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.8;
+
+  margin: 48px 0;
+
+  .dont {
+    font-size: 15vw;
+    font-weight: 400;
+    font-variation-settings: "wdth" 100;
+  }
+  .believe {
+    font-size: 13.9vw;
+    font-weight: 460;
+    font-variation-settings: "wdth" 96;
+  }
+  .every {
+    font-size: 9.2vw;
+    font-weight: 590;
+    font-variation-settings: "wdth" 80;
+  }
+  .you {
+    font-size: 22vw;
+    font-weight: 320;
+    font-variation-settings: "wdth" 100;
+    padding-left: 20px;
+  }
+
+  .think {
+    font-size: 25vw;
+    font-weight: 305;
+    font-variation-settings: "wdth" 75;
+    padding-left: 0px;
+  }
+}
