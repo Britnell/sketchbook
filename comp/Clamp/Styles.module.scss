@@ -1,0 +1,24 @@
+// https://dev.to/christianmay21/easy-css-clamp-scss-mixin-1225
+// adjusted to give out rem not px
+
+@function clamp-calc(
+  $font-min,
+  $font-max,
+  $screen-min,
+  $screen-max,
+  $rem-size
+) {
+  $slope: ($font-max - $font-min) / ($screen-max - $screen-min);
+  $y-axis-intersection: -1 * $screen-min * $slope + $font-min;
+
+  // convert to rem
+  $min: $font-min / $rem-size * 1rem;
+  $max: $font-max / $rem-size * 1rem;
+  $intersect: $y-axis-intersection / $rem-size * 1rem;
+
+  @return clamp(#{$min}, #{$intersect} + #{$slope} * 100vw, #{$max});
+}
+
+.t1 {
+  font-size: clamp-calc(16px, 100px, 500px, 1000px, 16px);
+}

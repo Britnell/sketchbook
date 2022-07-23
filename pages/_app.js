@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
     "navbar",
     "tooltip",
     "moresecrets",
+    "clamp",
   ];
   return (
     <div>
