@@ -1,0 +1,17 @@
+.container h1 {
+  position: absolute;
+}
+
+.follow {
+  --d: 100px;
+  width: var(--d);
+  height: var(--d);
+  // background-color: blue;
+  border: 1px solid black;
+
+  --x: calc(var(--mx) * var(--d));
+  --y: calc(var(--my) * var(--d));
+  transform: translate(var(--x), var(--y));
+
+  transition: transform 0.3s ease-in-out;
+}

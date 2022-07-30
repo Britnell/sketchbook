@@ -24,6 +24,10 @@ function MyApp({ Component, pageProps }) {
     "clamp",
     "outline",
     "variable",
+    // "textform",
+    "followgrid",
+    "follow",
+    "radix",
   ];
   return (
     <div>

@@ -1,0 +1,18 @@
+.container h1 {
+  position: absolute;
+}
+
+.follow {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  background: rgb(121, 121, 121);
+  padding: 18px;
+  border-radius: 18px;
+  color: #fff;
+  top: 0;
+  left: 0;
+  // border: 1px solid black;
+  // transition: transform 0.3s ease-in-out;
+  transform: translate(0, 0);
+}

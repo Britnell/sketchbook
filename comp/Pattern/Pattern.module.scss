@@ -59,8 +59,15 @@
   background-size: 100px 100px, 180px 180px;
 }
 
-.dots {
-  height: 80vh;
+.lines {
+  height: 300vh;
 
-  /* background-image: ; */
+  background-image: url("data:image/svg+xml,\
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200'>\
+      <path style='stroke:black; stroke-width: 2;' \
+        d='M 0,40 1000,60'  \
+       />\
+    </svg>");
+  background-position: 0 0, 0 0;
+  background-size: 1000px 1000px;
 }

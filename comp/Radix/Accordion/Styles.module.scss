@@ -1,0 +1,46 @@
+@keyframes open {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes close {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.content {
+  overflow: hidden;
+  &[data-state="open"] {
+    animation: open 0.5s;
+  }
+  &[data-state="closed"] {
+    animation: close 0.5s;
+  }
+}
+
+.trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.4s;
+  [data-state="open"] & {
+    transform: rotate(180deg);
+  }
+}
