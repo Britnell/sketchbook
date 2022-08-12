@@ -1,0 +1,22 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 100px;
+
+  p {
+    font-size: 24px;
+  }
+}
+
+.woah {
+  font-size: 12vw;
+
+  position: relative;
+  left: -100px;
+
+  transition: all 0.1s linear;
+  h1 {
+    --b: calc(255 - var(--v) * 255);
+    color: rgb(var(--b), var(--b), var(--b));
+  }
+}

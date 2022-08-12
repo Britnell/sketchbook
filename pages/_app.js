@@ -28,6 +28,8 @@ function MyApp({ Component, pageProps }) {
     "followgrid",
     "follow",
     "radix",
+    "woah",
+    "skeleton",
   ];
   return (
     <div>
