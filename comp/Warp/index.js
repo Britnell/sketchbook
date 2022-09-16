@@ -42,7 +42,7 @@ const Figure = ({ config }) => {
     <>
       <Sprite
         {...config}
-        image="https://pixijs.io/examples/examples/assets/pixi-filters/displacement_map_repeat.jpg"
+        image="/displacement_map.jpg"
         ref={displacementSpriteRef}
       />
       {renderFilter && (
