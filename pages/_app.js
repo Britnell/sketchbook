@@ -30,6 +30,7 @@ function MyApp({ Component, pageProps }) {
     "radix",
     "woah",
     "skeleton",
+    "warp",
   ];
   return (
     <div>
