@@ -70,7 +70,11 @@ function MyApp({ Component, pageProps }) {
         <div>
           <p>
             Hi I'm Tommy and this is my web-development sketchbook to try out
-            ideas. <a href={gitUrl}>Find the code in the git repo</a>.
+            ideas.{" "}
+            <a href={gitUrl} target="_blank" rel="noopener noreferrer">
+              Find the code in the git repo
+            </a>
+            .
           </p>
         </div>
       </footer>
