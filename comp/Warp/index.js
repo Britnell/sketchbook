@@ -6,7 +6,7 @@ import React from "react";
 
 import * as PIXI from "pixi.js";
 
-const width = 800;
+const width = 600;
 const height = 600;
 const backgroundColor = 0x1d2330;
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
@@ -48,7 +48,7 @@ const Figure = ({ config }) => {
         >
           <Sprite
             anchor={0.5}
-            scale={0.5}
+            scale={0.3}
             x={width / 2}
             y={height / 2}
             image="/face.jpg"
