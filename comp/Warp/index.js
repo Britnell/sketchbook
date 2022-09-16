@@ -1,13 +1,7 @@
 // Displacement filter - https://pixijs.io/examples/#/filters-basic/displacement-map-crawlies.js
 // Demo -  https://codepen.io/inlet/pen/JjYMLpp
 
-import {
-  Stage,
-  withFilters,
-  Container,
-  Sprite,
-  useTick,
-} from "@inlet/react-pixi";
+import { Stage, withFilters, Container, Sprite } from "@inlet/react-pixi";
 import React from "react";
 
 import * as PIXI from "pixi.js";
@@ -69,7 +63,6 @@ export default function PixiWarp() {
   const ref = React.useRef();
   const [displacementConfig, setDisplacementConfig] = React.useState({
     ...config.displacement,
-    scale: 0,
   });
 
   React.useEffect(() => {
@@ -84,7 +77,7 @@ export default function PixiWarp() {
 
   return (
     <div>
-      <h1>Warping with Pixi.js</h1>
+      <h1>PIXI</h1>
       <div ref={ref}>
         <Stage width={width} height={height} options={{ backgroundColor }}>
           <Figure config={displacementConfig} />
