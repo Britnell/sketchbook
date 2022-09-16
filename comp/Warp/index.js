@@ -8,7 +8,7 @@ import * as PIXI from "pixi.js";
 
 const width = 600;
 const height = 600;
-const backgroundColor = 0x1d2330;
+const backgroundColor = 0xffffff;
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 const Filters = withFilters(Container, {
