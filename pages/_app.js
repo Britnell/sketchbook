@@ -4,8 +4,11 @@ import Head from "next/head";
 import styles from "../styles/Layout.module.scss";
 import "../styles/globals.css";
 import "../styles/resets.css";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   const pages = [
     "gradient",
     "count",
@@ -32,6 +35,15 @@ function MyApp({ Component, pageProps }) {
     "skeleton",
     "warp",
   ];
+
+  const page = router?.route?.slice(1);
+  const capitalise = (str) => str[0].toUpperCase() + str.slice(1);
+
+  const gitUrl = page
+    ? `https://github.com/Britnell/sketchbook/blob/main/comp/${capitalise(
+        page
+      )}/index.js`
+    : "https://github.com/Britnell/sketchbook";
   return (
     <div>
       <Head>
@@ -58,11 +70,7 @@ function MyApp({ Component, pageProps }) {
         <div>
           <p>
             Hi I'm Tommy and this is my web-development sketchbook to try out
-            ideas.{" "}
-            <a href="https://github.com/Britnell/sketchbook">
-              Find the code in the git repo
-            </a>
-            .
+            ideas. <a href={gitUrl}>Find the code in the git repo</a>.
           </p>
         </div>
       </footer>

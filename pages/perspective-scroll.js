@@ -1,3 +1,3 @@
-import Page from "../comp/PerspectThree";
+import Page from "../comp/perspective-scroll";
 
 export default Page;

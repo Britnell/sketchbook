@@ -1,3 +1,3 @@
-import Page from "../comp/PerspectOne";
+import Page from "../comp/Perspective";
 
 export default Page;
