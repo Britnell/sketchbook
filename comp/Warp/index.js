@@ -84,7 +84,7 @@ export default function PixiWarp() {
 
   return (
     <div>
-      <h1>PIXI</h1>
+      <h1>Warping with Pixi.js</h1>
       <div ref={ref}>
         <Stage width={width} height={height} options={{ backgroundColor }}>
           <Figure config={displacementConfig} />
