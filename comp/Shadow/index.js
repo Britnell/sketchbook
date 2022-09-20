@@ -10,6 +10,7 @@ function Shadow({ children }) {
       const MY = (ev.y / window?.innerHeight - 0.5) * 2;
       const mag = Math.sqrt(MX * MX + MY * MY);
       document.body.style.setProperty("--mx", MX);
+      document.body.style.setProperty("--absx", Math.abs(MX));
       document.body.style.setProperty("--my", MY);
       document.body.style.setProperty("--mag", mag);
 
@@ -30,8 +31,29 @@ function Shadow({ children }) {
   return (
     <main>
       <h1 className={styles.shadow}>Look AROUND you</h1>
-      <p>alsdkjasldkj</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
       <h1 className={styles.light}>The Rocky Horror Picture Show</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+      <div className={styles.throw}>
+        <h1 className={styles.shade}>STAR WARS</h1>
+        <h1 className={styles.letter}>STAR WARS</h1>
+      </div>
     </main>
   );
 }

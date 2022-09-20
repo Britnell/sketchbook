@@ -50,7 +50,7 @@ const Page = () => {
         className={styles.canvas}
         mouseMoved={mouseMoved}
       />
-      <p>following trail with p5</p>
+      <p>following trail with p5 </p>
     </main>
   );
 };

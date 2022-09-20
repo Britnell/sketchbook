@@ -1,4 +1,4 @@
-.shadow {
+h1.shadow {
   font-size: 120px;
   color: hsl(193, 45%, 82%);
   position: relative;
@@ -12,7 +12,7 @@
   top: calc(0px - var(--y));
 }
 
-.light {
+h1.light {
   font-size: 120px;
   color: hsl(193, 45%, 82%);
   position: relative;
@@ -22,4 +22,31 @@
   --y: calc(var(--my) * var(--f));
   --blur: calc(var(--mag) * 3px);
   text-shadow: var(--x) var(--y) var(--blur) black;
+}
+
+.throw {
+  display: flex;
+  justify-content: center;
+  font-size: 7vw;
+}
+
+.letter,
+.shade {
+  line-height: 0.7;
+}
+
+.letter {
+  position: absolute;
+  color: rgb(22, 35, 100);
+}
+
+.shade {
+  --ang: calc(var(--mx) * 40deg);
+  /* --hei: calc(var(--absx) * 15deg + 50deg); */
+  --hei: calc(60deg - var(--absx) * 10deg);
+  /* --hei: 50deg; */
+  transform-origin: bottom;
+  transform: rotateX(var(--hei)) skewX(var(--ang));
+  color: transparent;
+  text-shadow: 0 0 0.2rem hsla(0, 0%, 0%, 0.5);
 }
