@@ -11,6 +11,9 @@ const delayLink = (ev) => {
 const Transition = () => {
   return (
     <main>
+      <h3 style={{ marginBottom: "3rem" }}>
+        Test of a page in/out transition - click on "Login" or "Buy now" buttons
+      </h3>
       <header className={styles.header}>
         <h1>
           <div className={styles.blob}>&nbsp;</div>Transition

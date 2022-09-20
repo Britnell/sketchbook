@@ -11,6 +11,7 @@ const Page = () => {
           Radix UI Primitives
         </a>
       </h1>
+      <p>Try navigating with keyboard</p>
 
       <h3>Dialog</h3>
       <section>

@@ -40,6 +40,8 @@ const Follow = () => {
     let fric = 0.7;
 
     const animate = () => {
+      if (!accRef.current || !ref.current) return;
+
       const accRect = accRef.current.getBoundingClientRect();
       const container = ref.current.getBoundingClientRect();
 
