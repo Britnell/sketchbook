@@ -31,6 +31,7 @@ const regexScore = (str, rgx) => {
 };
 
 const searchScore = (str, query) => {
+  if (!query) return 0;
   const words = query
     .trim()
     .split(" ")
@@ -80,6 +81,7 @@ const Search = () => {
 export default Page;
 
 const lookaheadScore = (str, query) => {
+  if (!query) return 0;
   const letter = "[\\w-]*";
   let expr = query.split("").join(letter);
   expr = letter + expr + letter;
