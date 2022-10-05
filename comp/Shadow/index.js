@@ -13,15 +13,6 @@ function Shadow({ children }) {
       document.body.style.setProperty("--absx", Math.abs(MX));
       document.body.style.setProperty("--my", MY);
       document.body.style.setProperty("--mag", mag);
-
-      // console.log(MX, MY);
-      const factor = 50;
-
-      const facB = 60;
-      const B = {
-        x: Math.floor(MX / facB),
-        y: Math.floor(MY / facB),
-      };
     };
 
     window.addEventListener("mousemove", onMove);

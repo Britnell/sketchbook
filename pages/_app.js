@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }) {
     "skeleton",
     "warp",
     "trail",
+    "regex",
   ];
 
   const page = router?.route?.slice(1);
