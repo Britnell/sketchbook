@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
     "trail",
     "regex",
     "javascript",
-    "fp-ts",
+    "functional",
   ];
 
   const page = router?.route?.slice(1);
