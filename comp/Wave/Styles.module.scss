@@ -1,0 +1,30 @@
+.cont {
+  --col: #eee;
+  --w: 300px;
+
+  background: repeating-linear-gradient(
+    100deg,
+    white,
+    white calc(var(--w) / 2),
+    var(--col) 0,
+    var(--col) var(--w)
+  );
+}
+
+.p1 {
+  height: 50vh;
+  background: linear-gradient(0deg, white, blue);
+
+  --size: 50px;
+  --p: 25px;
+  --R: 55.9px;
+
+  mask: radial-gradient(
+        var(--R) at 50% calc(var(--size) + var(--p)),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(-1 * var(--p)), #0000 99%, #000 101%)
+      50% var(--size) / calc(4 * var(--size)) 100% repeat-x;
+}

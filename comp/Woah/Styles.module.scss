@@ -15,8 +15,11 @@
   left: -100px;
 
   transition: all 0.1s linear;
+
   h1 {
     --b: calc(255 - var(--v) * 255);
     color: rgb(var(--b), var(--b), var(--b));
+    --p: calc((1 - var(--v)) * -100px);
+    transform: translateX(var(--p));
   }
 }
