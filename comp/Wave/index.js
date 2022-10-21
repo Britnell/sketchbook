@@ -1,5 +1,5 @@
 import styles from "./Styles.module.scss";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const useInput = ({ initialVal = 0 }) => {
   const [val, setVal] = useState(initialVal);

@@ -38,6 +38,7 @@ function MyApp({ Component, pageProps }) {
     "regex",
     "javascript",
     "functional",
+    "wave",
   ];
 
   const page = router?.route?.slice(1);
