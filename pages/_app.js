@@ -39,6 +39,7 @@ function MyApp({ Component, pageProps }) {
     "javascript",
     "functional",
     "wave",
+    "zustand",
   ];
 
   const page = router?.route?.slice(1);

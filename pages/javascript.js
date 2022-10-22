@@ -23,12 +23,15 @@ const Maps = () => {
 
   // Set to remove duplicate values
   const usersOnline = [3, 1, 15, 3, 42, 3];
-  const online = [...new Set(usersOnline)];
-  online.add(99);
-  online.delete(15);
+  const userSet = new Set(usersOnline);
+  console.log("unique Set : ", usersOnline, " > ", [...userSet]);
+
+  userSet.add(99);
+  userSet.delete(15);
+  console.log(" add and delete > ", [...userSet]);
+
   // online.clear()
   // bool : online.has(42)
-  console.log(" Set : ", usersOnline, " > ", online);
 
   return (
     <div>
@@ -38,7 +41,7 @@ const Maps = () => {
         {[...users].map((user) => {
           const [name, { id, status }] = user;
           return (
-            <li>
+            <li key={id}>
               {name} is {status} - (#{id})
             </li>
           );
@@ -50,6 +53,7 @@ const Maps = () => {
 export default function Page() {
   return (
     <div>
+      <h1>This is a js example, see console & code </h1>
       <Maps />
     </div>
   );
