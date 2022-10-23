@@ -30,8 +30,54 @@ const Maps = () => {
   userSet.delete(15);
   console.log(" add and delete > ", [...userSet]);
 
+  // Timer
+  console.time("looper");
+  for (let x = 0; x < 10000; x++) {}
+  console.timeEnd("looper");
+
   // online.clear()
   // bool : online.has(42)
+
+  // Arrays
+
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+  let portion = numbers.slice(4, 6); // (start,end)
+  let first = numbers.shift();
+  let last = numbers.pop();
+  numbers.unshift(0);
+  numbers.push(99);
+
+  let alphabet = Array.from("acdexghi");
+  let _alpha = Array.from(alphabet);
+  let __lpha = [...alphabet];
+
+  // + splice          ( index, deleteCount, insert... )
+  alphabet.splice(1, 0, "b");
+  alphabet.splice(5, 1, "f");
+
+  const flattened = [
+    [1, 2],
+    [3, 4],
+  ].flat();
+
+  // Iterator
+
+  // * Loop arrays
+  const abc = ["a", "b", "c"];
+
+  // + forEach
+  abc.forEach((val, i) => {});
+
+  // + values
+  var iterator = abc.values();
+  for (const val of iterator) {
+  }
+
+  // + entries
+  iterator = abc.entries(); // creates arrays of [key,value] pairs
+  let _a, _b;
+  let [i, __a] = iterator.next().value; // [0, "a"]
+  let [j, __b] = iterator.next().value; // [1, "b"]
 
   return (
     <div>
