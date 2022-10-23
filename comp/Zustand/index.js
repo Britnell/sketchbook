@@ -17,6 +17,11 @@ const Page = () => {
       </p>
       <Counter />
       <Shopping />
+      <p>
+        Actually something dynamic like a shopping list with a dynamic list of
+        items is not the best example for this. The list counts as one zustand
+        item and everything that uses the list re-renders anyway
+      </p>
     </main>
   );
 };

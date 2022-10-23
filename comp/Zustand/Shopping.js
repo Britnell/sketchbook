@@ -28,24 +28,40 @@ const AddItem = () => {
   );
 };
 
-const Shopping = () => {
-  const shoppingList = useShopping((st) => st.list);
+const ShoppingItem = ({ name, q }) => {
   const increase = useShopping((st) => st.increase);
   const clear = useShopping((st) => st.clear);
+
+  return (
+    <li className={styles.itemrow}>
+      <div>
+        {name} : {q}
+      </div>
+      <button onClick={() => increase(name)}>add</button>
+      <button onClick={() => clear(name)}>clear</button>
+    </li>
+  );
+};
+
+const Shopping = () => {
+  const shoppingList = useShopping((st) => st.list);
+
+  const list = Object.entries(shoppingList);
+  const filtered = list.filter((li) => li[1] > 0);
+  const rest = list.filter((li) => li[1] === 0);
 
   return (
     <div>
       <h2>Shopping List</h2>
       <ul>
-        {Object.entries(shoppingList).map((item, i) => (
-          <li key={i} className={styles.itemrow}>
-            {console.log(item)}
-            <div>
-              {item[0]} : {item[1]}
-            </div>
-            <button onClick={() => increase(item[0])}>add</button>
-            <button onClick={() => clear(item[0])}>clear</button>
-          </li>
+        {filtered.map((item, i) => (
+          <ShoppingItem key={i} name={item[0]} q={item[1]} />
+        ))}
+      </ul>
+      <h3>Finished</h3>
+      <ul>
+        {rest.map((item, i) => (
+          <ShoppingItem key={i} name={item[0]} q={item[1]} />
         ))}
       </ul>
       <AddItem />
