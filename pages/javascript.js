@@ -58,16 +58,3 @@ export default function Page() {
     </div>
   );
 }
-
-// React is loaded and is available as React and ReactDOM
-// imports should NOT be used
-const FocusableInput = (props) => {
-  // Write your code here
-  const ref = React.useRef();
-  React.useEffect(() => {
-    if (props.shouldFocus) {
-      ref.current.focus();
-    }
-  }, [props.shouldFocus]);
-  return <input ref={ref} type="text" />;
-};
