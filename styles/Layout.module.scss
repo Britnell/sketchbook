@@ -1,7 +1,16 @@
 .layout {
   background-color: rgb(244, 244, 244);
+  overflow: hidden;
+  max-height: 100px;
+  transition: max-height 0.8s linear;
+
+  display: flex;
+  align-items: center;
+  &:hover {
+    max-height: 1000px;
+  }
   ul {
-    padding: 0;
+    padding: 1rem 0;
     margin: 0 80px;
     display: flex;
     flex-flow: row wrap;
