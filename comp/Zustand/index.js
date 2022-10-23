@@ -1,17 +1,7 @@
 import styles from "./Page.module.css";
-import useCounter from "./counter";
+import Counter from "./counter";
+import Shopping from "./Shopping";
 
-const Display = () => {
-  const count = useCounter((st) => st.count);
-  return <h2>Counter : {count}</h2>;
-};
-
-const Counter = () => (
-  <div className={styles.counter}>
-    <Display />
-    <Controls />
-  </div>
-);
 const Page = () => {
   return (
     <main>
@@ -31,24 +21,4 @@ const Page = () => {
   );
 };
 
-const Controls = () => {
-  const increment = useCounter((st) => st.increment);
-  const decrement = useCounter((st) => st.decrement);
-
-  return (
-    <>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
-    </>
-  );
-};
-
-const Shopping = () => {
-  return (
-    <div>
-      <h2>Shopping List</h2>
-      <div>asdasd</div>
-    </div>
-  );
-};
 export default Page;
