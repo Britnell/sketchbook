@@ -45,6 +45,7 @@ const ShoppingItem = ({ name, q }) => {
 
 const Shopping = () => {
   const shoppingList = useShopping((st) => st.list);
+  const print = useShopping((st) => st.print);
 
   const list = Object.entries(shoppingList);
   const filtered = list.filter((li) => li[1] > 0);
@@ -65,14 +66,26 @@ const Shopping = () => {
         ))}
       </ul>
       <AddItem />
+      <div>
+        <button onClick={print}>Print</button>
+      </div>
     </div>
   );
 };
 
-const useShopping = create((set) => ({
+const useShopping = create((set, get) => ({
   list: {
     apple: 1,
     pairs: 3,
+  },
+  print: () => {
+    const list = get().list;
+    const txt = Object.entries(list)
+      .map((it) => ` * ${it[0]} : ${it[1]}`)
+      .join("\n");
+
+    alert("====PRINT=====\n" + txt);
+    console.log("====PRINT=====\n" + txt);
   },
   increase: (name) =>
     set((st) => ({
