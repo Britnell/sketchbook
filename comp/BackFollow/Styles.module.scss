@@ -1,0 +1,84 @@
+.head {
+  padding: 2rem 0;
+  font-weight: normal;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.backgrad {
+  --w: 30px;
+  --grad: 30px;
+  --col: hsla(0, 42%, 51%, 0.666);
+  height: 100vw;
+  width: 100vw;
+  --dx: calc(var(--mx) * 0.707px + 85vh - var(--my) * 0.707px);
+  --dy: calc(100vw - var(--mx) * 0.707px + 50vh - var(--my) * 0.707px);
+  // --y: calc(var(--mx) * 100vh * 1px);
+  background: linear-gradient(
+      45deg,
+      transparent,
+      transparent calc(var(--dx) - var(--w) - var(--grad)),
+      var(--col) calc(var(--dx) - var(--w)),
+      var(--col) calc(var(--dx) + var(--w)),
+      transparent calc(var(--dx) + var(--w) + var(--grad)),
+      transparent 100vw
+    ),
+    linear-gradient(
+      -45deg,
+      transparent,
+      transparent calc(var(--dy) - var(--w) - var(--grad)),
+      var(--col) calc(var(--dy) - var(--w)),
+      var(--col) calc(var(--dy) + var(--w)),
+      transparent calc(var(--dy) + var(--w) + var(--grad)),
+      transparent 100vw
+    );
+}
+.cont {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.box {
+  margin: 2rem;
+  display: inline-block;
+  background: #ccc;
+  padding: 2rem;
+}
+
+.radial {
+  width: 100vw;
+  height: 100vh;
+  --x: calc(var(--mx, 0.5) * 100%);
+  --y: calc(var(--my, 0.5) * 100%);
+  --p1: 200px;
+  --p2: 400px;
+
+  background: radial-gradient(
+      circle at var(--x) var(--y),
+      white 0px,
+      white var(--p1),
+      transparent var(--p1),
+      transparent var(--p2),
+      white var(--p2),
+      white 1000px
+    ),
+    conic-gradient(
+      at var(--x) var(--y),
+      white 10deg,
+      transparent 10deg,
+
+      transparent 110deg,
+      white 110deg,
+      white 130deg,
+      transparent 130deg,
+
+      transparent 230deg,
+      white 230deg,
+      white 250deg,
+      transparent 250deg,
+
+      transparent 350deg,
+      white 350deg
+    ),
+    conic-gradient(at var(--x) var(--y), red, blue 180deg, red 360deg);
+}
