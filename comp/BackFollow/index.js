@@ -6,6 +6,7 @@ import styles from "./Styles.module.scss";
 const Follow = () => {
   const refOne = useRef(null);
   const refTwo = useRef(null);
+  const refThree = useRef(null);
 
   useEffect(() => {
     const listen = (ev) => {
@@ -23,6 +24,7 @@ const Follow = () => {
   }, [refOne, refTwo]);
 
   useMouseover(refTwo);
+  useMouseover(refThree);
 
   return (
     <main>
@@ -103,6 +105,16 @@ const Follow = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
+        </div>
+      </div>
+      <div ref={refThree} className={styles.smooth}>
+        <div className={styles.cont}>
+          <h2>
+            Following with transition - making gradient follow with
+            background-position and applying CSS transition. However the result
+            is not smooth. it seems each new update to the css variable cancels
+            the previous animation.
+          </h2>
         </div>
       </div>
     </main>

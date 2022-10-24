@@ -82,3 +82,17 @@
     ),
     conic-gradient(at var(--x) var(--y), red, blue 180deg, red 360deg);
 }
+
+.smooth {
+  width: 100vw;
+  height: 80vh;
+  border-bottom: 1px solid #000;
+
+  --x: calc(var(--mx) * 100vw);
+  --y: calc(var(--my) * 100vh);
+  background: radial-gradient(circle at 40px 40px, red 40px, white 40px)
+    no-repeat;
+
+  background-position: var(--x) var(--y);
+  transition: background-position 0.2s ease-in-out;
+}
