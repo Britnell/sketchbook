@@ -1,3 +1,4 @@
+import Menu from "./Menu";
 import CSSNavbar from "./Navbar";
 import ToggleNavbar from "./toggle";
 
@@ -8,8 +9,8 @@ const Page = () => {
         Making a hover elements just a little more accessible with a little css
       </h2>
       <CSSNavbar />
-
       <ToggleNavbar />
+      <Menu />
     </>
   );
 };

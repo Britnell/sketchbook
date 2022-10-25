@@ -100,7 +100,7 @@ const ToggleNavbar = () => {
         </p>
       </div>
       <header>
-        <nav aria-label="Main" className={styles.nav}>
+        <nav aria-label="NavMenu" className={styles.nav}>
           <ul className={styles.menu}>
             <MenuItem id="home" expanded={expanded} setExpanded={setExpanded} />
             <MenuItem

@@ -1,0 +1,15 @@
+.nav ul[role="menubar"] {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.menuitem > ul {
+  display: none;
+}
+.menuitem[aria-expanded="true"] > ul {
+  display: block;
+}
