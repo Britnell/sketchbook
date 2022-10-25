@@ -9,7 +9,7 @@
   --w: 30px;
   --grad: 30px;
   --col: hsla(0, 42%, 51%, 0.666);
-  height: 100vw;
+  height: 100vh;
   width: 100vw;
   --dx: calc(var(--mx) * 0.707px + 85vh - var(--my) * 0.707px);
   --dy: calc(100vw - var(--mx) * 0.707px + 50vh - var(--my) * 0.707px);
@@ -48,6 +48,7 @@
 .radial {
   width: 100vw;
   height: 100vh;
+
   --x: calc(var(--mx, 0.5) * 100%);
   --y: calc(var(--my, 0.5) * 100%);
   --p1: 200px;
