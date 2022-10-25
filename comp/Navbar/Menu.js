@@ -139,9 +139,13 @@ const Menu = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
         <h2>For larger Menu's lets try more advanced keyboard navigation</h2>
+        <p>
+          Here the menu is just one tabbable item, the rest is navigated through
+          arrow keys
+        </p>
       </div>
       <nav onKeyDown={onKey} className={styles.nav}>
         <MenuBuilder config={menuConfig} />
@@ -255,7 +259,7 @@ const MenuItem = ({
       className={styles.menuitem}
     >
       {name}
-      {children ? <ul>{children}</ul> : null}
+      {children ? <ul className={styles.submenu}>{children}</ul> : null}
     </li>
   );
 };

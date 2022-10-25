@@ -1,10 +1,24 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 50vh;
+}
+
 .nav ul[role="menubar"] {
   display: flex;
   gap: 1rem;
+  background-color: rgb(178, 217, 230);
+  padding: 2px 1rem;
 }
 
-.nav li {
-  list-style: none;
+.nav ul[role="menubar"] > li {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  min-width: 100%;
+  background-color: rgb(178, 217, 230);
 }
 
 .menuitem > ul {
@@ -12,4 +26,17 @@
 }
 .menuitem[aria-expanded="true"] > ul {
   display: block;
+}
+
+//  resets
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav li {
+  list-style: none;
+}
+.nav ul {
+  padding: 0;
 }

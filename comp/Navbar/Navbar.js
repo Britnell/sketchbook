@@ -2,7 +2,7 @@ import styles from "./Navbar.module.scss";
 
 const Page = () => {
   return (
-    <>
+    <div className={styles.container}>
       <p>As per Lea Verou's "Even MORE css secrets"</p>
       <p>A CSS only navbar is made keyboard friendly (also with CSS only) </p>
       <p>By the power of focus within</p>
@@ -55,7 +55,7 @@ const Page = () => {
         <p>Lorem Ipsum Page Some </p>
         <p>Lorem Ipsum Page Some </p>
       </main>
-    </>
+    </div>
   );
 };
 

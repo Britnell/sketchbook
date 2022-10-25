@@ -1,5 +1,10 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .header {
-  background-color: #999;
+  background-color: rgb(178, 217, 230);
 
   nav {
     display: flex;
@@ -15,7 +20,7 @@
     width: 100%;
     padding: 2px 4px;
     &:hover {
-      background-color: rgb(213, 218, 225);
+      background-color: rgb(178, 217, 230);
     }
   }
 
@@ -33,7 +38,7 @@
 
   .more {
     display: none;
-    background-color: #999;
+    background-color: rgb(178, 217, 230);
     position: absolute;
     width: 100%;
   }
@@ -45,6 +50,6 @@
 }
 
 .main {
-  min-height: 50vh;
+  min-height: 30vh;
   border-bottom: 1px solid #000;
 }
