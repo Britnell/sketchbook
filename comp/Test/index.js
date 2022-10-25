@@ -1,8 +1,5 @@
-import { useRef } from "react";
-import styles from "./Styles.module.scss";
-import { useScroller } from "css-var-animate";
 import Newsletter from "./newsletter";
-import Counter from "./Counter";
+import Counter from "./counter";
 
 const Page = () => {
   return (

@@ -1,10 +1,9 @@
 // Displacement filter - https://pixijs.io/examples/#/filters-basic/displacement-map-crawlies.js
 // Demo -  https://codepen.io/inlet/pen/JjYMLpp
 
-import { Stage, withFilters, Container, Sprite } from "@inlet/react-pixi";
 import React from "react";
-
 import * as PIXI from "pixi.js";
+import { Stage, withFilters, Container, Sprite } from "@inlet/react-pixi";
 
 const width = 600;
 const height = 600;

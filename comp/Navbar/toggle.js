@@ -38,8 +38,10 @@ const MenuItem = ({ id, children, expanded, setExpanded }) => {
     hoverRef.current.addEventListener("mouseleave", onLeave);
     return () => {
       if (timer) clearTimeout(timer);
-      hoverRef.current.removeEventListener("mouseover", onHover);
-      hoverRef.current.removeEventListener("mouseleave", onLeave);
+      hoverRef.current &&
+        hoverRef.current.removeEventListener("mouseover", onHover);
+      hoverRef.current &&
+        hoverRef.current.removeEventListener("mouseleave", onLeave);
     };
   }, [id, expanded, isExpanded, hoverRef]);
 
