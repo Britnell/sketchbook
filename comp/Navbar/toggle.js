@@ -8,63 +8,47 @@ import styles from "./Toggle.module.scss";
 const MenuItem = ({ id, children, expanded, setExpanded }) => {
   const itemRef = useRef();
   const hoverRef = useRef();
-
   const expandable = !!children;
   const isExpanded = id === expanded;
 
   const click = (ev) => {
     if (!expandable) return true;
-
+    // for expandable menuitems
     ev.preventDefault();
-
-    if (isExpanded) {
-      // close
-      setExpanded("");
-    } else {
-      // open
-      setExpanded(id);
-    }
+    if (isExpanded) setExpanded("");
+    else setExpanded(id);
     return false;
   };
 
   // * Expand on hover
   useEffect(() => {
     if (!hoverRef.current) return;
-
     let timer;
 
-    const onHover = (ev) => {
+    const onHover = () => {
       if (timer) clearTimeout(timer);
       if (!isExpanded) setExpanded(id);
     };
-    const onLeave = (ev) => {
+    const onLeave = () => {
       if (isExpanded) {
         timer = setTimeout(() => setExpanded(""), 400);
       }
     };
-
     hoverRef.current.addEventListener("mouseover", onHover);
     hoverRef.current.addEventListener("mouseleave", onLeave);
-
     return () => {
       if (timer) clearTimeout(timer);
-
       hoverRef.current.removeEventListener("mouseover", onHover);
       hoverRef.current.removeEventListener("mouseleave", onLeave);
     };
   }, [id, expanded, isExpanded, hoverRef]);
 
-  // * Auto-close submenus when you tab past
-  useEffect(() => {
-    if (!itemRef.current) return;
-    const onFocus = (ev) => {
-      if (expanded !== "" && expanded !== id) {
-        setExpanded("");
-      }
-    };
-    itemRef.current.addEventListener("focus", onFocus);
-    return () => itemRef.current.removeEventListener("focus", onFocus);
-  }, [id, expanded, isExpanded, itemRef]);
+  const focus = (ev) => {
+    // * Auto-close submenus when you tab past
+    if (expanded !== "" && expanded !== id) {
+      setExpanded("");
+    }
+  };
 
   return (
     <li ref={hoverRef}>
@@ -74,6 +58,7 @@ const MenuItem = ({ id, children, expanded, setExpanded }) => {
         href={`#${id}`}
         aria-expanded={isExpanded}
         onClick={click}
+        onFocus={focus}
       >
         {id} {expandable ? (isExpanded ? "x" : "v") : ""}
       </a>
