@@ -3,6 +3,7 @@ import styles from "./Pattern.module.scss";
 const Pattern = () => {
   return (
     <main>
+      <h2>Creating svg inline in CSS with a data-url</h2>
       <div className={styles.container}>
         <p>{"Test - SVG : circle & text"}</p>
         <div className={styles.p1}></div>

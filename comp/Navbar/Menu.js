@@ -258,7 +258,7 @@ const MenuItem = ({
       onKeyDown={onKey}
       className={styles.menuitem}
     >
-      {name}
+      {name} {isExpanded ? " " : "v"}
       {children ? <ul className={styles.submenu}>{children}</ul> : null}
     </li>
   );
