@@ -20,7 +20,7 @@ function Shadow({ children }) {
   }, []);
 
   return (
-    <main>
+    <main className={styles.main}>
       <h1 className={styles.shadow}>Look AROUND you</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

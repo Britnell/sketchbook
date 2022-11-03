@@ -1,3 +1,9 @@
+.main {
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
 h1.shadow {
   font-size: 120px;
   color: hsl(193, 45%, 82%);
@@ -27,7 +33,8 @@ h1.light {
 .throw {
   display: flex;
   justify-content: center;
-  font-size: 7vw;
+  font-size: min(7vw, 80px);
+  white-space: pre;
 }
 
 .letter,

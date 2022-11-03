@@ -1,6 +1,7 @@
 import Menu from "./Menu";
 import CSSNavbar from "./Navbar";
 import ToggleNavbar from "./toggle";
+import HoverToggle from "./hover";
 
 const Page = () => {
   return (
@@ -10,6 +11,7 @@ const Page = () => {
       </h2>
       <CSSNavbar />
       <ToggleNavbar />
+      <HoverToggle />
       <Menu />
     </>
   );

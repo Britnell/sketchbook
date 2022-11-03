@@ -1,0 +1,40 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 400px;
+}
+
+.nav li {
+  list-style: none;
+}
+
+.bar {
+  display: flex;
+  gap: 2rem;
+
+  background-color: rgb(178, 217, 230);
+}
+
+.toggle {
+  opacity: 0;
+}
+
+.toggle:focus-visible {
+  opacity: 1;
+}
+
+.li {
+  display: none;
+}
+.expanded {
+  display: block;
+}
+
+.listitem:hover .li {
+  display: block;
+}
+
+.listitem > ul {
+  position: absolute;
+  background-color: rgb(178, 217, 230);
+}
