@@ -41,6 +41,7 @@ function MyApp({ Component, pageProps }) {
     "wave",
     "zustand",
     "backgroundfollow",
+    "borders",
   ];
 
   const page = router?.route?.slice(1);
