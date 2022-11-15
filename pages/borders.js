@@ -1,2 +1,2 @@
-import Page from "../comp/Border";
+import Page from "../comp/Borders";
 export default Page;
