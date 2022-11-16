@@ -42,6 +42,7 @@ function MyApp({ Component, pageProps }) {
     "zustand",
     "backgroundfollow",
     "borders",
+    "clippath",
   ];
 
   const page = router?.route?.slice(1);
