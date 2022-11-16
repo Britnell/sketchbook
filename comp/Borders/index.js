@@ -12,8 +12,8 @@ const Follow = () => {
       <div>
         <h1>Fancy Borders</h1>
         <p>
-          Fancy Borders are all the rage now it seems, so I wanted to go through
-          this again, and try out different ways to do this
+          I'm seeing fancy borders everywhere recently, so I wanted to go try
+          out different ways on this again and see what we can do
         </p>
       </div>
       <div className={styles.grid}>

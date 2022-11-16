@@ -48,7 +48,8 @@
   border: 8px solid transparent;
   border-radius: 1rem;
   background: linear-gradient(white, white) padding-box,
-    linear-gradient(-45deg, blue, red) border-box 0 / 200% 200%;
+    linear-gradient(-45deg, blue, blue 20%, red 80%, red) border-box 0 / 200%
+      200%;
   animation: move 1s linear infinite alternate;
 }
 
