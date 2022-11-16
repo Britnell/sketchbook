@@ -162,3 +162,64 @@
 .p5:hover {
   clip-path: inset(0 0 0 0 round 16px);
 }
+
+.p7 {
+  --value: 0%;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 10%,
+    var(--value) 10%,
+    var(--value) 20%,
+    100% 20%,
+    100% 30%,
+    var(--value) 30%,
+    var(--value) 40%,
+    100% 40%,
+
+    100% 50%,
+    var(--value) 50%,
+    var(--value) 60%,
+    100% 60%,
+
+    100% 70%,
+    var(--value) 70%,
+    var(--value) 80%,
+    100% 80%,
+
+    100% 90%,
+    var(--value) 90%,
+    var(--value) 100%,
+    100% 100%,
+
+    90% 100%,
+    90% var(--value),
+    80% var(--value),
+    80% 100%,
+
+    70% 100%,
+    70% var(--value),
+    60% var(--value),
+    60% 100%,
+
+    50% 100%,
+    50% var(--value),
+    40% var(--value),
+    40% 100%,
+
+    30% 100%,
+    30% var(--value),
+    20% var(--value),
+    20% 100%,
+
+    10% 100%,
+    10% var(--value),
+    0% var(--value),
+    0% 100%
+  );
+  transition: 0.5s clip-path ease-out;
+}
+
+.p7:hover {
+  --value: 100%;
+}

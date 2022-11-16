@@ -44,6 +44,16 @@ const Follow = () => {
         </div>
 
         <div>
+          <p>Double curtain??</p>
+        </div>
+        <div className={styles.p7}>
+          <img
+            src="https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="test image"
+          />
+        </div>
+
+        <div>
           <p>
             For example I recently saw a nice use of this as a shifting polygon{" "}
           </p>
