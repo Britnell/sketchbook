@@ -8,15 +8,15 @@ const Follow = () => {
       <div>
         <h1>Clippath</h1>
       </div>
+      <p>
+        As i discovered previously in <a href="secrets">CSS Secrets</a>, clip
+        paths can be animated. This is really cool, though practically only when
+        we define them as a polygon, hence they have to be edgey shapes. (or do
+        they?) - still we can achieve some nice effects with this
+      </p>
       <div className={styles.grid}>
         <div>
-          <p>
-            As i discovered previously in <a href="secrets">CSS Secrets</a>,
-            clip paths can be animated. This is really cool, though practically
-            only when we define them as a polygon, hence they have to be edgey
-            shapes. (or do they?) - still we can achieve some nice effects with
-            this
-          </p>
+          <p>just make the normal square rotate its corners around</p>
         </div>
         <div className={styles.p1}>
           <img
@@ -80,6 +80,18 @@ const Follow = () => {
           <p>which we can use to go from square to round</p>
         </div>
         <div className={styles.p5}>
+          <img
+            src="https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            alt="test image"
+          />
+        </div>
+        <div>
+          <p>
+            ok one more, circle is a little boring to play with, but there is an
+            ellipse so we can
+          </p>
+        </div>
+        <div className={styles.p8}>
           <img
             src="https://images.pexels.com/photos/247929/pexels-photo-247929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt="test image"

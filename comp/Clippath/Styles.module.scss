@@ -18,6 +18,8 @@
 }
 .grid p {
   padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
 }
 .grid img {
   width: 100%;
@@ -34,7 +36,7 @@
 
 .p1:hover {
   clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .p6 {
@@ -222,4 +224,13 @@
 
 .p7:hover {
   --value: 100%;
+}
+
+.p8 {
+  clip-path: ellipse(50% 15% at 50% 50%);
+  transition: 0.3s clip-path ease-out;
+}
+
+.p8:hover {
+  clip-path: ellipse(50% 50% at 50% 50%);
 }
